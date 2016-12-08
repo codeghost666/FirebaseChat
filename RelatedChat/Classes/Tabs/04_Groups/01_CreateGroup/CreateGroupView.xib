@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateGroupView">
+            <connections>
+                <outlet property="fieldName" destination="bRI-Lv-MtU" id="yuL-LF-Ler"/>
+                <outlet property="imageGroup" destination="gDO-Hn-L5q" id="FTc-FD-Zeh"/>
+                <outlet property="searchBar" destination="TEa-vD-a14" id="GUY-qf-C9u"/>
+                <outlet property="tableView" destination="i5M-Pr-FkT" id="MAj-tl-His"/>
+                <outlet property="view" destination="ltC-1a-2RP" id="rr3-tL-5C2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ltC-1a-2RP">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creategroup_blank.png" translatesAutoresizingMaskIntoConstraints="NO" id="gDO-Hn-L5q">
+                    <rect key="frame" x="8" y="3" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="LvO-gl-OF4"/>
+                        <constraint firstAttribute="height" constant="44" id="iO0-c0-eQX"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5d-Uo-Zbg">
+                    <rect key="frame" x="8" y="3" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="DtW-K2-0Pi"/>
+                        <constraint firstAttribute="height" constant="44" id="OMV-JL-YkX"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="actionImage:" destination="-1" eventType="touchUpInside" id="K4J-h1-bHI"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Group name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRI-Lv-MtU">
+                    <rect key="frame" x="60" y="3" width="250" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="zZP-Bv-RwZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" returnKeyType="next"/>
+                </textField>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="TEa-vD-a14">
+                    <rect key="frame" x="0.0" y="50" width="320" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="uTQ-Yc-Wp5"/>
+                    </connections>
+                </searchBar>
+                <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="i5M-Pr-FkT">
+                    <rect key="frame" x="0.0" y="94" width="320" height="474"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Tng-2m-Rnh"/>
+                        <outlet property="delegate" destination="-1" id="9aC-8N-iBw"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bRI-Lv-MtU" firstAttribute="top" secondItem="ltC-1a-2RP" secondAttribute="top" constant="3" id="2hn-3g-GSQ"/>
+                <constraint firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Grv-Of-i95"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="top" secondItem="ltC-1a-2RP" secondAttribute="top" constant="94" id="HZH-Ux-Oxn"/>
+                <constraint firstItem="bRI-Lv-MtU" firstAttribute="leading" secondItem="ltC-1a-2RP" secondAttribute="leading" constant="60" id="Iiu-Hv-Kgc"/>
+                <constraint firstItem="gDO-Hn-L5q" firstAttribute="top" secondItem="ltC-1a-2RP" secondAttribute="top" constant="3" id="JKd-aS-hiu"/>
+                <constraint firstAttribute="trailing" secondItem="bRI-Lv-MtU" secondAttribute="trailing" constant="10" id="N1q-XW-2Ni"/>
+                <constraint firstItem="i5M-Pr-FkT" firstAttribute="leading" secondItem="ltC-1a-2RP" secondAttribute="leading" id="N6b-RC-8PN"/>
+                <constraint firstItem="v5d-Uo-Zbg" firstAttribute="leading" secondItem="ltC-1a-2RP" secondAttribute="leading" constant="8" id="RaY-uT-wep"/>
+                <constraint firstItem="TEa-vD-a14" firstAttribute="leading" secondItem="ltC-1a-2RP" secondAttribute="leading" id="SAz-TN-cg5"/>
+                <constraint firstItem="gDO-Hn-L5q" firstAttribute="leading" secondItem="ltC-1a-2RP" secondAttribute="leading" constant="8" id="ZcG-s1-oRa"/>
+                <constraint firstItem="v5d-Uo-Zbg" firstAttribute="top" secondItem="ltC-1a-2RP" secondAttribute="top" constant="3" id="fBL-SD-yhF"/>
+                <constraint firstItem="TEa-vD-a14" firstAttribute="top" secondItem="ltC-1a-2RP" secondAttribute="top" constant="50" id="k1G-5U-nEo"/>
+                <constraint firstAttribute="trailing" secondItem="TEa-vD-a14" secondAttribute="trailing" id="tzE-uf-h08"/>
+                <constraint firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="uiD-0e-LkU"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="303" y="1070"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="creategroup_blank.png" width="44" height="44"/>
+    </resources>
+</document>
